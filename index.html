@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shashvath P — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Animated particle background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ─── NAVIGATION ─── -->
+  <nav>
+    <div class="nav-logo">SP</div>
+    <div class="nav-links">
+      <a href="#hero" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="nav-cta">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+      </svg>
+      Let's Talk
+    </a>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section id="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-orb ho1"></div>
+    <div class="hero-orb ho2"></div>
+    <div class="hero-orb ho3"></div>
+    <div class="hero-content">
+
+      <!-- AI Avatar -->
+      <div class="avatar-wrap">
+        <div class="avatar-ring"></div>
+        <div class="avatar-ring-inner"></div>
+        <svg class="avatar-svg" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="bgG" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#0d1f3c"/><stop offset="100%" stop-color="#060c1a"/>
+            </radialGradient>
+            <radialGradient id="faceG" cx="50%" cy="45%" r="50%">
+              <stop offset="0%" stop-color="#1a3a6b"/><stop offset="70%" stop-color="#0e2040"/><stop offset="100%" stop-color="#081428"/>
+            </radialGradient>
+            <radialGradient id="gBlue" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.5"/><stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="gw">
+              <feGaussianBlur stdDeviation="2.5" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <clipPath id="cc"><circle cx="80" cy="80" r="78"/></clipPath>
+            <linearGradient id="scanG" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#06b6d4" stop-opacity="0"/>
+              <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.35"/>
+              <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <circle cx="80" cy="80" r="80" fill="url(#bgG)"/>
+          <g clip-path="url(#cc)" opacity="0.2">
+            <line x1="0" y1="40" x2="160" y2="40" stroke="#3b82f6" stroke-width="0.4"/>
+            <line x1="0" y1="80" x2="160" y2="80" stroke="#3b82f6" stroke-width="0.4"/>
+            <line x1="0" y1="120" x2="160" y2="120" stroke="#3b82f6" stroke-width="0.4"/>
+            <line x1="40" y1="0" x2="40" y2="160" stroke="#3b82f6" stroke-width="0.4"/>
+            <line x1="80" y1="0" x2="80" y2="160" stroke="#3b82f6" stroke-width="0.4"/>
+            <line x1="120" y1="0" x2="120" y2="160" stroke="#3b82f6" stroke-width="0.4"/>
+          </g>
+          <circle cx="80" cy="75" r="52" fill="url(#gBlue)" opacity="0.4"/>
+          <g clip-path="url(#cc)">
+            <path d="M50 148 C50 125 65 118 80 115 C95 118 110 125 110 148 Z" fill="#0e2040" stroke="#1e4080" stroke-width="0.8"/>
+            <ellipse cx="80" cy="75" rx="38" ry="45" fill="url(#faceG)" stroke="#1a4080" stroke-width="0.8"/>
+            <path d="M58 50 L50 45 L45 47" stroke="#3b82f6" stroke-width="0.8" fill="none" opacity="0.7" filter="url(#gw)"/>
+            <path d="M102 50 L110 45 L115 47" stroke="#3b82f6" stroke-width="0.8" fill="none" opacity="0.7" filter="url(#gw)"/>
+            <circle cx="45" cy="47" r="1.5" fill="#3b82f6" opacity="0.9"/>
+            <circle cx="115" cy="47" r="1.5" fill="#3b82f6" opacity="0.9"/>
+            <path d="M62 62 Q69 59 76 61" stroke="#4a8ed4" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <path d="M84 61 Q91 59 98 62" stroke="#4a8ed4" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <ellipse cx="70" cy="71" rx="9" ry="6.5" fill="#081428" stroke="#1a4080" stroke-width="0.5"/>
+            <ellipse cx="90" cy="71" rx="9" ry="6.5" fill="#081428" stroke="#1a4080" stroke-width="0.5"/>
+            <circle cx="70" cy="71" r="4.5" fill="#0d2a5e"/>
+            <circle cx="90" cy="71" r="4.5" fill="#0d2a5e"/>
+            <circle cx="70" cy="71" r="3" fill="#06b6d4" opacity="0.9" filter="url(#gw)"/>
+            <circle cx="90" cy="71" r="3" fill="#06b6d4" opacity="0.9" filter="url(#gw)"/>
+            <circle cx="70" cy="71" r="5" fill="none" stroke="#3b82f6" stroke-width="0.6" opacity="0.5"/>
+            <circle cx="90" cy="71" r="5" fill="none" stroke="#3b82f6" stroke-width="0.6" opacity="0.5"/>
+            <circle cx="71.5" cy="69.5" r="1" fill="white" opacity="0.6"/>
+            <circle cx="91.5" cy="69.5" r="1" fill="white" opacity="0.6"/>
+            <path d="M80 76 L77 86 Q80 88 83 86 Z" fill="#0e2a50" stroke="#1a4080" stroke-width="0.6"/>
+            <path d="M70 97 Q76 100 80 99 Q84 100 90 97" stroke="#2a5080" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <line x1="45" y1="75" x2="60" y2="75" stroke="#3b82f6" stroke-width="0.6" opacity="0.5"/>
+            <line x1="45" y1="79" x2="58" y2="79" stroke="#06b6d4" stroke-width="0.5" opacity="0.4"/>
+            <line x1="100" y1="75" x2="115" y2="75" stroke="#3b82f6" stroke-width="0.6" opacity="0.5"/>
+            <line x1="102" y1="79" x2="115" y2="79" stroke="#06b6d4" stroke-width="0.5" opacity="0.4"/>
+            <circle cx="80" cy="53" r="1.2" fill="#06b6d4" opacity="0.8"/>
+            <path d="M75 55 L80 53 L85 55" stroke="#3b82f6" stroke-width="0.6" fill="none" opacity="0.5"/>
+            <rect x="42" y="50" width="76" height="20" fill="url(#scanG)" opacity="0.6">
+              <animateTransform attributeName="transform" type="translate" values="0,0;0,60;0,0" dur="3s" repeatCount="indefinite"/>
+            </rect>
+          </g>
+          <circle cx="80" cy="80" r="78" fill="none" stroke="#06b6d4" stroke-width="0.5" opacity="0.3"/>
+          <circle cx="80" cy="80" r="74" fill="none" stroke="#3b82f6" stroke-width="0.5" stroke-dasharray="8 4" opacity="0.4">
+            <animateTransform attributeName="transform" type="rotate" from="0 80 80" to="360 80 80" dur="20s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+        <div class="avatar-online"></div>
+      </div>
+
+      <h1 class="hero-name">SHASHVATH <span class="grad">P</span></h1>
+      <p class="hero-sub">Software Engineer &amp; Data Analyst</p>
+      <div class="hero-tags">
+        <span class="htag">Python Developer</span>
+        <span class="htag">Full Stack</span>
+        <span class="htag">Data Analytics</span>
+        <span class="htag">Machine Learning</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-p">
+          Explore My Work
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+        <a href="#contact" class="btn-g">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg>
+          Contact Me
+        </a>
+        <a href="https://www.linkedin.com/in/shash-383b803aa" target="_blank" rel="noopener" class="btn-icon" title="LinkedIn">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue">
+      <span>Scroll</span>
+      <div class="scroll-arr"></div>
+    </a>
+  </section>
+
+  <div class="section-sep"></div>
+
+  <!-- ─── ABOUT ─── -->
+  <section id="about">
+    <div class="container">
+      <div class="sec-center" style="margin-bottom:48px">
+        <span class="badge b-blue">About Me</span>
+        <h2 class="sec-title">Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="card about-main">
+          <p>I'm a Computer Science and Engineering student with hands-on experience in software development and data analytics, backed by practical exposure to Python, SQL, MongoDB, and Oracle.</p>
+          <p>I enjoy building reliable, real-world solutions and continuously strengthening my backend and analytical skills through projects, certifications, and internships.</p>
+          <p>With a strong foundation in IT concepts and databases, I bring a problem-solving mindset, adaptability, and the ability to work effectively in collaborative environments.</p>
+          <div class="loc">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            India
+          </div>
+        </div>
+        <div class="mini-stack">
+          <div class="card mini">
+            <div class="mini-head"><div class="ibox ib-c">🧠</div><h4>Current Project</h4></div>
+            <p>Real-Time AI-Assisted Cheating Detection System for virtual interviews — analyzing live webcam and audio streams to identify suspicious behavior.</p>
+          </div>
+          <div class="card mini">
+            <div class="mini-head"><div class="ibox ib-p">⚡</div><h4>IoT Projects</h4></div>
+            <p>Smart plant watering system and a wearable health monitoring device for heart patients with real-time ECG tracking.</p>
+          </div>
+          <div class="card mini">
+            <div class="mini-head"><div class="ibox ib-g">🚀</div><h4>Career Goals</h4></div>
+            <p>Seeking entry-level roles as Associate Software Developer or Data Analyst — growing into a skilled engineer building scalable, meaningful solutions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-sep"></div>
+
+  <!-- ─── SKILLS ─── -->
+  <section id="skills">
+    <div class="container">
+      <div class="sec-center">
+        <span class="badge b-blue">Expertise</span>
+        <h2 class="sec-title">Technical <span class="g">Arsenal</span></h2>
+        <p class="sec-desc">Technologies and tools I use to bring ideas to life</p>
+      </div>
+      <div class="skills-grid">
+        <div class="card skill-card"><div class="sk-name">Python</div><span class="sk-cat">Languages</span><div class="sk-track"><div class="sk-fill" style="width:90%;background:linear-gradient(90deg,#3b82f6,#06b6d4)"></div></div><span class="sk-pct">90%</span></div>
+        <div class="card skill-card"><div class="sk-name">SQL</div><span class="sk-cat">Databases</span><div class="sk-track"><div class="sk-fill" style="width:85%;background:linear-gradient(90deg,#3b82f6,#06b6d4)"></div></div><span class="sk-pct">85%</span></div>
+        <div class="card skill-card"><div class="sk-name">MongoDB</div><span class="sk-cat">Databases</span><div class="sk-track"><div class="sk-fill" style="width:80%;background:linear-gradient(90deg,#22c55e,#86efac)"></div></div><span class="sk-pct">80%</span></div>
+        <div class="card skill-card"><div class="sk-name">Oracle</div><span class="sk-cat">Databases</span><div class="sk-track"><div class="sk-fill" style="width:75%;background:linear-gradient(90deg,#f59e0b,#fcd34d)"></div></div><span class="sk-pct">75%</span></div>
+        <div class="card skill-card"><div class="sk-name">Flask</div><span class="sk-cat">Frameworks</span><div class="sk-track"><div class="sk-fill" style="width:85%;background:linear-gradient(90deg,#3b82f6,#06b6d4)"></div></div><span class="sk-pct">85%</span></div>
+        <div class="card skill-card"><div class="sk-name">Computer Vision</div><span class="sk-cat">AI / ML</span><div class="sk-track"><div class="sk-fill" style="width:80%;background:linear-gradient(90deg,#8b5cf6,#ec4899)"></div></div><span class="sk-pct">80%</span></div>
+        <div class="card skill-card"><div class="sk-name">Machine Learning</div><span class="sk-cat">AI / ML</span><div class="sk-track"><div class="sk-fill" style="width:78%;background:linear-gradient(90deg,#8b5cf6,#ec4899)"></div></div><span class="sk-pct">78%</span></div>
+        <div class="card skill-card"><div class="sk-name">React</div><span class="sk-cat">Frontend</span><div class="sk-track"><div class="sk-fill" style="width:82%;background:linear-gradient(90deg,#06b6d4,#67e8f9)"></div></div><span class="sk-pct">82%</span></div>
+        <div class="card skill-card"><div class="sk-name">Node.js</div><span class="sk-cat">Backend</span><div class="sk-track"><div class="sk-fill" style="width:75%;background:linear-gradient(90deg,#22c55e,#86efac)"></div></div><span class="sk-pct">75%</span></div>
+        <div class="card skill-card"><div class="sk-name">Git</div><span class="sk-cat">Tools</span><div class="sk-track"><div class="sk-fill" style="width:85%;background:linear-gradient(90deg,#f97316,#fdba74)"></div></div><span class="sk-pct">85%</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-sep"></div>
+
+  <!-- ─── PROJECTS ─── -->
+  <section id="projects">
+    <div class="proj-section-bg"></div>
+    <div class="container">
+      <div class="sec-center">
+        <span class="badge b-purple">Portfolio</span>
+        <h2 class="sec-title">Featured <span class="g">Projects</span></h2>
+        <p class="sec-desc">Innovative solutions built across AI, IoT, and web development</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Project 1: AI Cheating Detection -->
+        <div class="card project-card">
+          <div class="proj-img">
+            <canvas id="c1"></canvas>
+            <div class="proj-icon-badge" style="background:rgba(139,92,246,.35)">👁️</div>
+          </div>
+          <div class="proj-body">
+            <h3>AI Cheating Detection System</h3>
+            <p>Real-Time AI-Assisted system for virtual interviews — analyzing live webcam and audio streams to identify suspicious behavior and generate explainable alerts.</p>
+            <div class="ptags">
+              <span class="ptag">Python</span><span class="ptag">Computer Vision</span><span class="ptag">ML</span><span class="ptag">OpenCV</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/shash07x" target="_blank" rel="noopener" class="plink">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                View Project
+              </a>
+              <a href="https://github.com/shash07x" target="_blank" rel="noopener" class="plink">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Smart IoT Plant Watering -->
+        <div class="card project-card">
+          <div class="proj-img">
+            <canvas id="c2"></canvas>
+            <div class="proj-icon-badge" style="background:rgba(34,197,94,.3)">🌱</div>
+          </div>
+          <div class="proj-body">
+            <h3>Smart IoT Plant Watering</h3>
+            <p>IoT-based smart plant watering system with automated moisture sensing and cloud connectivity for remote monitoring and control.</p>
+            <div class="ptags">
+              <span class="ptag">IoT</span><span class="ptag">Sensors</span><span class="ptag">Arduino</span><span class="ptag">Cloud</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/shash07x" target="_blank" rel="noopener" class="plink">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                View Project
+              </a>
+              <a href="https://github.com/shash07x" target="_blank" rel="noopener" class="plink">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Health Monitoring Wearable -->
+        <div class="card project-card">
+          <div class="proj-img">
+            <canvas id="c3"></canvas>
+            <div class="proj-icon-badge" style="background:rgba(236,72,153,.3)">💓</div>
+          </div>
+          <div class="proj-body">
+            <h3>Health Monitoring Wearable</h3>
+            <p>Wearable health monitoring device for heart patients with real-time ECG tracking and emergency alert system.</p>
+            <div class="ptags">
+              <span class="ptag">IoT</span><span class="ptag">Healthcare</span><span class="ptag">Embedded</span><span class="ptag">Data Analytics</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/shash07x" target="_blank" rel="noopener" class="plink">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                View Project
+              </a>
+              <a href="https://github.com/shash07x" target="_blank" rel="noopener" class="plink">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Juriscentra -->
+        <div class="card project-card">
+          <div class="proj-img">
+            <canvas id="c4"></canvas>
+            <div class="proj-icon-badge" style="background:rgba(59,130,246,.35)">⚖️</div>
+            <div class="proj-live-badge">
+              <div class="proj-live-dot"></div>Live
+            </div>
+          </div>
+          <div class="proj-body">
+            <h3>Juriscentra — AI Legal Chatbot</h3>
+            <p>Full-stack AI-powered legal advisor supporting 60+ country jurisdictions — structured legal guidance, law citations, and lawsuit defense strategies with dynamic UI.</p>
+            <div class="ptags">
+              <span class="ptag">React</span><span class="ptag">Claude API</span><span class="ptag">AI</span><span class="ptag">Full Stack</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://juriscentra-x.vercel.app/" target="_blank" rel="noopener" class="plink">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                View Project
+              </a>
+              <a href="https://github.com/shash07x" target="_blank" rel="noopener" class="plink">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-sep"></div>
+
+  <!-- ─── EXPERIENCE ─── -->
+  <section id="experience">
+    <div class="container">
+      <div class="sec-center" style="margin-bottom:48px">
+        <span class="badge b-blue">Experience</span>
+        <h2 class="sec-title">Work Experience</h2>
+        <p class="sec-desc">Industry exposure through internships in Full Stack Development and Data Analytics</p>
+      </div>
+      <div class="exp-list">
+        <div class="card exp-card">
+          <div class="exp-head">
+            <div class="exp-ico">💼</div>
+            <div>
+              <div class="exp-role">Data Analyst</div>
+              <div class="exp-co">Mindnotix Software Solutions</div>
+            </div>
+          </div>
+          <div class="exp-meta">
+            <span>December 2024 – January 2025</span><span>•</span><span>Coimbatore</span>
+          </div>
+          <ul class="exp-ul">
+            <li>Gained foundational knowledge in data analysis — data cleaning, chart creation, and basic statistical methods using Excel</li>
+            <li>Acquired introductory SQL skills for querying and managing relational databases</li>
+            <li>Explored core data science and ML concepts, including data preprocessing and pattern identification</li>
+          </ul>
+        </div>
+        <div class="card exp-card">
+          <div class="exp-head">
+            <div class="exp-ico">🌐</div>
+            <div>
+              <div class="exp-role">Full Stack Web Developer</div>
+              <div class="exp-co">Qono Technologies Pvt Ltd</div>
+            </div>
+          </div>
+          <div class="exp-meta">
+            <span>December 2023 – January 2024</span><span>•</span><span>Coimbatore</span>
+          </div>
+          <ul class="exp-ul">
+            <li>Designed and deployed 2+ full-stack web apps, improving user engagement by 40% through responsive UI and clean architecture</li>
+            <li>Implemented secure authentication with JWT and optimized backend performance using middleware and aggregation pipelines</li>
+            <li>Contributed to production-grade codebases applying custom hooks, Context API, and robust error handling</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-sep"></div>
+
+  <!-- ─── EDUCATION ─── -->
+  <section id="education">
+    <div class="container">
+      <div class="edu-grid">
+        <div>
+          <span class="badge b-blue" style="margin-bottom:14px;display:inline-block">Education</span>
+          <h2 class="sec-title" style="margin-bottom:26px">Academic Background</h2>
+          <div class="card edu-card">
+            <div class="edu-card-head">
+              <div class="edu-ico">🎓</div>
+              <div>
+                <div class="edu-deg">Bachelor's in Computer Science</div>
+                <div class="edu-sch">Sri Ramakrishna Engineering College</div>
+                <div class="edu-dates">September 2022 – May 2026</div>
+                <div class="edu-desc">Pursuing a comprehensive CS degree with focus on software development, data analytics, and emerging technologies.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="badge b-cyan" style="margin-bottom:14px;display:inline-block">Certifications</span>
+          <h2 class="sec-title" style="margin-bottom:26px">Certifications</h2>
+          <div class="cert-list">
+            <div class="cert-item">
+              <div class="cert-ico">🐍</div>
+              <div class="cert-info">
+                <div class="cert-name">Python 101 for Data Science</div>
+                <div class="cert-issuer">IBM — Cognitive Class</div>
+              </div>
+              <a href="https://courses.cognitiveclass.ai/certificates/user/certification/PY0101EN" target="_blank" rel="noopener" class="cert-btn">View ↗</a>
+            </div>
+            <div class="cert-item">
+              <div class="cert-ico">💻</div>
+              <div class="cert-info">
+                <div class="cert-name">Python Developer Certification</div>
+                <div class="cert-issuer">freeCodeCamp</div>
+              </div>
+              <a href="https://freecodecamp.org/certification/fcc-77b9efb0-c572-417c-89e7-0ea45839005d/python-v9" target="_blank" rel="noopener" class="cert-btn">View ↗</a>
+            </div>
+            <div class="cert-item">
+              <div class="cert-ico">☁️</div>
+              <div class="cert-info">
+                <div class="cert-name">Oracle APEX Cloud Developer</div>
+                <div class="cert-issuer">Oracle Certified Professional</div>
+              </div>
+              <a href="https://mylearn.oracle.com/" target="_blank" rel="noopener" class="cert-btn">View ↗</a>
+            </div>
+            <div class="cert-item">
+              <div class="cert-ico">🍃</div>
+              <div class="cert-info">
+                <div class="cert-name">MongoDB Certification</div>
+                <div class="cert-issuer">MongoDB University</div>
+              </div>
+              <a href="https://university.mongodb.com/certificate/f13e094d-7356-4327-bfe7-46acd648aea3" target="_blank" rel="noopener" class="cert-btn">View ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-sep"></div>
+
+  <!-- ─── CONTACT ─── -->
+  <section id="contact">
+    <div class="container">
+      <div class="sec-center">
+        <span class="badge b-blue">Get In Touch</span>
+        <h2 class="sec-title">Let's <span class="g">Connect</span></h2>
+        <p class="sec-desc">Open to connecting with professionals, recruiters, and teams working on innovative products and data-driven systems</p>
+      </div>
+      <div class="contact-grid">
+        <a href="mailto:shash.07x@gmail.com" class="contact-card">
+          <div class="c-icon">✉️</div>
+          <div class="c-label">Email</div>
+          <div class="c-val">shash.07x@gmail.com</div>
+        </a>
+        <a href="https://www.linkedin.com/in/shash-383b803aa" target="_blank" rel="noopener" class="contact-card">
+          <div class="c-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#3b82f6">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </div>
+          <div class="c-label">LinkedIn</div>
+          <div class="c-val">Connect ↗</div>
+        </a>
+        <a href="https://github.com/shash07x" target="_blank" rel="noopener" class="contact-card">
+          <div class="c-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+            </svg>
+          </div>
+          <div class="c-label">GitHub</div>
+          <div class="c-val">View Projects ↗</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <div class="f-logo">Shashvath P</div>
+    <p class="f-copy">© 2025 Shashvath P. All rights reserved.</p>
+    <div class="f-links">
+      <a href="mailto:shash.07x@gmail.com" title="Email">✉️</a>
+      <a href="https://www.linkedin.com/in/shash-383b803aa" target="_blank" rel="noopener" title="LinkedIn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+      </a>
+      <a href="https://github.com/shash07x" target="_blank" rel="noopener" title="GitHub">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
